@@ -1,0 +1,20 @@
+<ng-container *ngIf="employee">
+  <h2>
+    {{ employee.name }}
+  </h2>
+  <div>
+    <span>
+      id: {{ employee.id }}
+    </span>
+  </div>
+  <div>
+    <label>
+      name:
+      <input
+        type="text"
+        placeholder="Enter the name"
+        [formControl]="name"
+      >
+    </label>
+  </div>
+</ng-container>

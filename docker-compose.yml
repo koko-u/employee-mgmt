@@ -1,0 +1,15 @@
+version: '3'
+services:
+  employee-mgmt:
+    image: "kokouu/employee-mgmt:v1"
+    build:
+      context: ./context
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./workspace:/usr/workspace:cached
+      - /usr/workspace/node_modules
+    working_dir: /usr/workspace
+    tty: true
+    container_name: employee-mgmt
+

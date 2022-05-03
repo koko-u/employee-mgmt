@@ -1,0 +1,11 @@
+
+<ng-container *ngIf="anyMessages$ | async">
+  <h2>
+    Message Logs
+  </h2>
+  <button class="clear" (click)="onClear()">Clear</button>
+  <div *ngFor="let message of messages$ | async">
+    <em-log-message [message]="message"></em-log-message>
+  </div>
+</ng-container>
+
